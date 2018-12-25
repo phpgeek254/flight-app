@@ -1,3 +1,4 @@
+import 'package:airline_app/HomeScreenBottomPart.dart';
 import 'package:flutter/material.dart';
 import './HomeScreenTopPart.dart';
 void main() => runApp(
@@ -19,7 +20,8 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body:(Column(
         children: <Widget>[
-        HomeScreenTopPart()
+        HomeScreenTopPart(),
+        HomeScreenBottomPart()
         ],
       )),);
   }
