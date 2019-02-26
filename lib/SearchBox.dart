@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SearchBox extends StatefulWidget {
-  List<String> locations = <String>[];
+  final List<String> locations;
   SearchBox(this.locations);
   @override
   _SearchBoxState createState() => _SearchBoxState();

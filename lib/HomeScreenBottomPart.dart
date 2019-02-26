@@ -6,6 +6,8 @@ class HomeScreenBottomPart extends StatelessWidget {
     CityListCard("assets/images/hw.jpg", "Huwaii", "April 2019", "20", "300", "250"),
     CityListCard("assets/images/la.jpg", "Los Angels", "March 2019", "10", "200", "150"),
     CityListCard("assets/images/ucla.jpg", "UCLA", "May 2019", "15", "400", "350"),
+    CityListCard("assets/images/ucla.jpg", "UCLA", "May 2019", "15", "400", "350"),
+    CityListCard("assets/images/la.jpg", "Los Angels", "March 2019", "10", "200", "150"),
   ];
 
   @override
@@ -24,7 +26,7 @@ class HomeScreenBottomPart extends StatelessWidget {
           ),
         ),
         Container(
-          height: 210,
+          height: 240,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: cityList,

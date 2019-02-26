@@ -1,17 +1,16 @@
+import 'package:airline_app/DetailsPage/FlightListing.dart';
 import 'package:airline_app/choice_chip.dart';
+import 'package:airline_app/colors/colors.dart';
 import 'package:airline_app/custom_shape_clipper.dart';
+import 'package:airline_app/text_styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreenTopPart extends StatefulWidget {
   _HomeScreenTopPartState createState() => _HomeScreenTopPartState();
 }
 
-Color firstGradientColor = Color(0xFFF47D15);
-Color secondGradientColor = Color(0xFFEF772C);
-
 List<String> locations = ['Boston (BS)', 'New York City (JFK)'];
 
-TextStyle dropDownLabelStyle = TextStyle(color: Colors.white, fontSize: 16.0);
 
 class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
   var selectedLocationIndex = 0;
@@ -106,9 +105,14 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                         decoration: InputDecoration(
                             suffixIcon: Material(
                               elevation: 2.0,
-                              child: Icon(
-                                Icons.search,
-                                color: Colors.black,
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => FlightListing()));
+                                },
+                                child: Icon(
+                                  Icons.search,
+                                  color: Colors.black,
+                                ),
                               ),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(30.0)),
